@@ -1,0 +1,61 @@
+.App-header {
+  background-color: #282c34;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+button{
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+  padding-right:2rem;
+  padding-left:2rem;
+  font-size: medium;
+  margin-top: 2rem;
+  margin-left: 0.1rem;
+ 
+}
+
+input{
+  padding:0.5rem;
+  margin-top: 2rem;
+  font-size: medium;
+
+
+}
+
+body{
+  color: white;
+  justify-content: center;
+  text-align: center;
+  background-image: url('/marek-piwnicki-r9Vd1u6Q_8c-unsplash.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.try{
+  background-color: rgba(255, 255, 255, 0.5);
+  font-size: large;
+  font-weight: 600;
+  margin-left: 6%;
+  margin-right: 6%;
+  margin-top: 6%;
+
+
+}
+
+.cont{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.date{
+  font-size: small;
+}
