@@ -1,0 +1,43 @@
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background-color: var(--color-blue-300);
+   
+  
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hide-on-small {
+    display: none;
+  }
+  
+  @media screen and (min-width: 768px) { /* Adjust breakpoint as needed */
+    .hide-on-small {
+      display: block;
+    }
+  }
+
+  .hide-on-large {
+    display: block;
+  }
+  @media screen and (min-width: 768px) { /* Adjust breakpoint as needed */
+    .hide-on-large {
+      display: none;
+    }
+  }

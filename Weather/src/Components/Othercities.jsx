@@ -3,10 +3,10 @@ import assets from "../../public/assets/assets";
 
 const OtherCities = () => {
   const cities = [
-    { name: "Manchester", temp: "7°", condition: "Cloudy. High: 11° Low: 18°" },
-    { name: "Edinburgh", temp: "19°", condition: "Rain. High: 8° Low: 12°" },
-    { name: "Bristol", temp: "22°", condition: "Snow. High: 2° Low: 8°" },
-    { name: "York", temp: "20°", condition: "Cloudy. High: 10° Low: 18°" },
+    { name: "Pokhara", temp: "20°", condition: "Cloudy. High: 18° Low: 25°" },
+    { name: "Chitwan", temp: "19°", condition: "Clear Sky. High: 20° Low: 25°" },
+    { name: "Biratnagar", temp: "22°", condition: "Clear Sky. High: 17° Low: 22°" },
+    { name: "Birgunj", temp: "20°", condition: "Cloudy. High: 17° Low: 26°" },
   ];
 
   return (

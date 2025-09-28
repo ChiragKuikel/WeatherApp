@@ -5,16 +5,18 @@ import Weathernow from './Weather';
 import { useState } from 'react';
 import { createContext } from 'react';
 import axios from 'axios';
-import Header from './Pages/Header';
+import Header from './Components/Header';
 import CurrentWeather from './Components/CurrentWeather';
 import Highlights from './Components/TodaysHighlights'
 import Othercities from './Components/Othercities'
 export const loc = createContext();
 export const currentweather = createContext();
+export const weeklyforecast = createContext();
 function App() {
   const[location,setLocation] = useState({lat:'',long:''});
   const [userLocation,setUserLocation] = useState({country:'',city:''});
   const [currentWeather,setCurrentWeather] = useState('');
+  const [forecast,setForecast] = useState('');
   useEffect(() =>{
   if(navigator.geolocation){
     navigator.geolocation.getCurrentPosition((position) =>{
@@ -45,7 +47,20 @@ useEffect(() => {
     console.log(error.message);
   })
  }},[location] );
+
+ useEffect(() => {
+  if (location.lat && location.long) {
+  axios.get(`http://localhost:8000/data/weeklyforecast?lat=${location.lat}&long=${location.long}`).then((response) => {
+    console.log(response.data);
+    setForecast(response.data);
+  }).catch((error) => {
+    console.log(error.message);
+  })
+ }},[location] );
+ 
+ 
   return (
+    <weeklyforecast.Provider value={forecast}>
     <loc.Provider value = {userLocation}>
       <currentweather.Provider value={currentWeather}>
     <div >
@@ -63,7 +78,7 @@ useEffect(() => {
     </div>
     </currentweather.Provider>
     </loc.Provider>
-      
+    </weeklyforecast.Provider>
   );
 }
 

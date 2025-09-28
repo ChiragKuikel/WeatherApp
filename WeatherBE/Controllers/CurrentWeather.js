@@ -4,7 +4,7 @@ const currentweather = (req, res) => {
   const { lat, long } = req.query;
   axios
     .get(
-      `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${process.env.OPENWEATHER}`
+      `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${process.env.OPENWEATHER}&units=metric`
     )
     .then(function (response) {
       console.log("success");
